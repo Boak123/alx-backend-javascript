@@ -1,5 +1,5 @@
 export function getListStudentIds(){
-  if (!Array.isArray(students)) {
+  if (students instanceof Array)) {
     return students.map(student => student.id);
   }
   return [];

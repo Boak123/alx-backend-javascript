@@ -1,7 +1,7 @@
-export default class Currency() {
+export default class Currency {
   constructor(code, name) {
-    this._code = code;
-    this._name = name;
+    this.code = code;
+    this.name = name;
   }
 
   get code() {
@@ -9,7 +9,7 @@ export default class Currency() {
   }
 
   set code(value) {
-    return this._code = value;
+    this._code = value;
   }
 
   get name() {
@@ -17,10 +17,14 @@ export default class Currency() {
   }
 
   set name(value) {
-    return this._name = value;
+    this._name = value;
   }
 
+  /**
+   * Creates the full string representation of this Currency.
+   * @returns {String}
+   */
   displayFullCurrency() {
-    return '${this.name} (${this.code})';
+    return `${this.name} (${this.code})`;
   }
 }
